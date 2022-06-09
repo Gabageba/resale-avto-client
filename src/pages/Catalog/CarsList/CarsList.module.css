@@ -1,0 +1,29 @@
+.cars {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1160px;
+    /*grid-column-gap: 25px;*/
+    grid-row-gap: 40px;
+}
+
+.selectedPage {
+  color: #c3073f;
+}
+
+.error {
+  margin-top: 40px;
+  width: 1160px;
+  text-align: center;
+  color: #c3073f;
+}
+
+.carsLine {
+  margin-top: 25px;
+}
+
+.errorText {
+  font-family: Montserrat, serif;
+  font-size: 20px;
+  font-weight: 400;
+}

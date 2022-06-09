@@ -1,0 +1,33 @@
+.active {
+  color: #c3073f;
+  border: 1px solid #c3073f;
+}
+
+.unActive {
+  color: #494949;
+  border: 1px solid #494949;
+}
+
+.unActive:hover {
+  color: #717171;
+  border: 1px solid #717171;
+}
+
+.pages button {
+  font-family: Montserrat, serif;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right:10px;
+  margin-top: -100px;
+}
+
+.pages {
+  height: 30px;
+  margin-top: 25px;
+  text-align: center;
+  /*display: flex;*/
+}
+
+

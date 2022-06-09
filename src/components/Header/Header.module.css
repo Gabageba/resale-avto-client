@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1d;
+    align-items: center;
+    height: 100px;
+    z-index: 20;
+    margin-left: -1px;
+
+}
+
+.logo {
+    width: 90px;
+    margin-right: 100px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.nav {
+    display: flex;
+    overflow: hidden;
+}
+
+.line {
+    top:99px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    border-bottom: 2px solid #c3073f;
+    /*margin-top: 230px;*/
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #1a1a1d;
+  height: 100px;
+  width: 100%;
+  z-index: 15;
+}

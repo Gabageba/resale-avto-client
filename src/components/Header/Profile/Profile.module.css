@@ -1,0 +1,85 @@
+.icon {
+  border: 2px solid #c3073f;
+  width: 50px;
+  height: 50px;
+  /*padding: 50%;*/
+  border-radius: 50%;
+  /*float: left;*/
+  /*margin-left: 425px;*/
+}
+
+.authButton {
+  /*margin-left: 360px;*/
+  margin-left: 150px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  height: 40px;
+  width: 100px;
+  font-family: akzidenzLightEx, serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dropDownLink {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 17px;
+  display: block;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.dropDownLinkActive {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  color: #c3073f;
+  font-weight: 500;
+  line-height: 17px;
+  display: block;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1d;
+  width: 184px;
+  /*border-image-slice: 1;*/
+  z-index: 1;
+  /*margin-top: 60px;*/
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.dropDown:hover .dropDownContent {
+  display: block;
+}
+
+.dropDownLink:hover {
+  color: #950740;
+}
+
+
+.profile {
+  display: flex;
+  font-family: akzidenzMediumEx, serif;
+  text-transform: uppercase;
+  margin-left: 100px;
+}
+
+.name {
+  margin-left: 15px;
+}
