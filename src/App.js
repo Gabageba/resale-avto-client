@@ -28,6 +28,7 @@ const App = () => {
     return <Spinner/>
   }
 
+
   return (
     <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={LOCALES.RUSSIAN}>
       <BrowserRouter>
