@@ -78,7 +78,7 @@ const Catalog = () => {
       dispatch(setCarsAC(data.rows))
     })
       .finally(() => {
-        window.scroll(0, 0)
+        // window.scroll(0, 0)
         setLoading(false)
       })
   }, [])
@@ -108,7 +108,7 @@ const Catalog = () => {
       .then(data => {
         dispatch(setTotalCountAC(data.count))
         dispatch(setCarsAC(data.rows))
-        window.scroll(0, 0)
+        // window.scroll(0, 0)
       })
   }, [selectedSort])
 
@@ -116,7 +116,7 @@ const Catalog = () => {
     if (selectedView.name === 'Grid') {
       dispatch(setLimitAC(9))
       // dispatch(setCurrentPageAC(1))
-      fetchCars(1, 9,selectedSort.name, selectedBrand.id, selectedModel.id,
+      fetchCars(currentPage, 9,selectedSort.name, selectedBrand.id, selectedModel.id,
         selectedBodyType.id, selectedDriveUnit.id, selectedTransmission.id,
         selectedSteeringWheel.id, minPrice, maxPrice, minYear, maxYear, minMillage, maxMillage)
         .then(data => {
@@ -126,13 +126,13 @@ const Catalog = () => {
     } else if (selectedView.name === 'List') {
       dispatch(setLimitAC(6))
       // dispatch(setCurrentPageAC(1))
-      fetchCars(1, 6,selectedSort.name, selectedBrand.id, selectedModel.id,
+      fetchCars(currentPage, 6,selectedSort.name, selectedBrand.id, selectedModel.id,
         selectedBodyType.id, selectedDriveUnit.id, selectedTransmission.id,
         selectedSteeringWheel.id, minPrice, maxPrice, minYear, maxYear, minMillage, maxMillage)
         .then(data => {
           dispatch(setTotalCountAC(data.count))
           dispatch(setCarsAC(data.rows))
-          window.scroll(0, 0)
+          // window.scroll(0, 0)
         })
     }
   }, [selectedView])
@@ -146,7 +146,7 @@ const Catalog = () => {
       dispatch(setCarsAC(data.rows))
     }).finally(() => {
       setLoading(false)
-      window.scroll(0, 0)
+      // window.scroll(0, 0)
     })
   }, [currentPage])
 
@@ -154,7 +154,8 @@ const Catalog = () => {
     fetchModels(selectedBrand.id).then(data => {
       dispatch(setFilterModels(data))
       dispatch(setSelectedModelsAC(''))
-    }).finally(() =>  window.scroll(0, 0))
+    })
+      // .finally(() =>  window.scroll(0, 0))
   }, [selectedBrand])
 
   if (loading) {
