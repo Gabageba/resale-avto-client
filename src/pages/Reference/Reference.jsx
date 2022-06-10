@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Reference.module.css'
 import logo from '../../assets/logo.svg'
 import {FormattedMessage} from 'react-intl';
+import Footer from '../../components/Footer/Footer';
 
 const Reference = () => {
   return (
@@ -15,7 +16,7 @@ const Reference = () => {
           <div className={style.companyInfo}><FormattedMessage id='about_p3' /></div>
         </div>
       </div>
-
+      <Footer/>
     </div>
   );
 };

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ChangeCar from './ChangeCar/ChangeCar';
 import SendForm from "../../components/SendForm/SendForm";
 import Footer from "../../components/Footer/Footer";
 import {FormattedMessage} from 'react-intl';
 
 const TradeIn = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <div>
       <h1 className='header-info'><FormattedMessage id='trade_in_header' /></h1>

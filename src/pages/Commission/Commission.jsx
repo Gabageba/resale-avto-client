@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SendForm from '../../components/SendForm/SendForm';
 import CommissionCar from './CommissionCar/CommissionCar';
 import Footer from "../../components/Footer/Footer";
 import {FormattedMessage} from 'react-intl';
 
+
 const Commission = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
+
   return (
     <div>
       <h1 className='header-info'><FormattedMessage id='commission_header' /></h1>

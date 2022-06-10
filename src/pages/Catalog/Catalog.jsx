@@ -77,7 +77,10 @@ const Catalog = () => {
       dispatch(setTotalCountAC(data.count))
       dispatch(setCarsAC(data.rows))
     })
-      .finally(() => setLoading(false))
+      .finally(() => {
+        window.scroll(0, 0)
+        setLoading(false)
+      })
   }, [])
 
   const clear = () => {
@@ -105,6 +108,7 @@ const Catalog = () => {
       .then(data => {
         dispatch(setTotalCountAC(data.count))
         dispatch(setCarsAC(data.rows))
+        window.scroll(0, 0)
       })
   }, [selectedSort])
 
@@ -128,6 +132,7 @@ const Catalog = () => {
         .then(data => {
           dispatch(setTotalCountAC(data.count))
           dispatch(setCarsAC(data.rows))
+          window.scroll(0, 0)
         })
     }
   }, [selectedView])
@@ -139,14 +144,17 @@ const Catalog = () => {
       selectedSteeringWheel.id, minPrice, maxPrice, minYear, maxYear, minMillage, maxMillage).then(data => {
       dispatch(setTotalCountAC(data.count))
       dispatch(setCarsAC(data.rows))
-    }).finally(() => setLoading(false))
+    }).finally(() => {
+      setLoading(false)
+      window.scroll(0, 0)
+    })
   }, [currentPage])
 
   useEffect(() => {
     fetchModels(selectedBrand.id).then(data => {
       dispatch(setFilterModels(data))
       dispatch(setSelectedModelsAC(''))
-    })
+    }).finally(() =>  window.scroll(0, 0))
   }, [selectedBrand])
 
   if (loading) {

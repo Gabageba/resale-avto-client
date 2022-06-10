@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './Detailing.module.css'
 import detailing from '../../assets/detailing4.png'
 import logo from '../../assets/logo.svg'
@@ -10,6 +10,11 @@ import SendForm from '../../components/SendForm/SendForm';
 import {FormattedMessage} from 'react-intl';
 
 const Detailing = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <div>
       <h1 className={style.header}><FormattedMessage id='detailing_header' /></h1>

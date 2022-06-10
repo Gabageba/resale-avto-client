@@ -11,6 +11,7 @@ const SendForm = ({type}) => {
   const [year, setYear] = useState('')
   const [price, setPrice] = useState('')
   const [number, setNumber] = useState('')
+  const [errorText, setErrorText] = useState('')
   const [errorActive, setErrorActive] = useState(false)
   const intl = useIntl()
 
@@ -19,6 +20,7 @@ const SendForm = ({type}) => {
       setPrice(0)
       setMillage(0)
     }
+    setErrorText(intl.formatMessage({id: 'send_form_error'}))
   }, [])
 
   const onSendClick = () => {
@@ -26,21 +28,29 @@ const SendForm = ({type}) => {
       if (type === 'trade-in') {
         createApplication(year, millage, number, brand, model, price, 1).then(() => {
           clear()
+          setErrorText(intl.formatMessage({id: 'send_form_thx'}))
+          setErrorActive(true)
         })
       } else if (type === 'commission') {
         createApplication(year, millage, number, brand, model, price, 2).then(() => {
           clear()
+          setErrorText(intl.formatMessage({id: 'send_form_thx'}))
+          setErrorActive(true)
         })
       }
     } else if (brand && model && year && number) {
       if (type === 'detailing') {
         createApplication(year, millage, number, brand, model, price, 3).then(() => {
           clear()
+          setErrorText(intl.formatMessage({id: 'send_form_thx'}))
+          setErrorActive(true)
         })
       } else {
+        setErrorText(intl.formatMessage({id: 'send_form_error'}))
         setErrorActive(true)
       }
     } else {
+      setErrorText(intl.formatMessage({id: 'send_form_error'}))
       setErrorActive(true)
     }
   }
@@ -56,7 +66,7 @@ const SendForm = ({type}) => {
 
   return (
     <div>
-      <ErrorPopUp errorText={intl.formatMessage({id: 'send_form_error'})} setActive={setErrorActive} active={errorActive}/>
+      <ErrorPopUp errorText={errorText} setActive={setErrorActive} active={errorActive}/>
       <div className={style.sendForm}>
         <input type="text" className={style.selectorLong} placeholder={intl.formatMessage({id: 'send_form_brand'})} onChange={e => setBrand(e.target.value)} value={brand}/>
         <input type="text" className={style.selectorLong} placeholder={intl.formatMessage({id: 'send_form_model'})} onChange={e => setModel(e.target.value)} value={model}/>

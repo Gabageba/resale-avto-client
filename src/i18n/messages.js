@@ -38,7 +38,7 @@ export const messages = {
     //footer
     footer_phone: 'Phone number',
     footer_info: 'Information',
-    footer_about_us: 'AboutUs',
+    footer_about_us: 'About Us',
     footer_contacts: 'Contacts',
     footer_services: 'Services',
     footer_commission: 'Commission',
@@ -72,6 +72,7 @@ export const messages = {
     car_owners: 'Owners',
     //send form
     send_form_error: 'Please fill in all fields',
+    send_form_thx: 'Thank you for the application you left',
     send_form_brand: 'Brand',
     send_form_model: 'Model',
     send_form_millage: 'Millage',
@@ -293,7 +294,7 @@ export const messages = {
     filter_transmission: 'КПП',
     filter_steering_wheel: 'Руль',
     filter_price: 'Цена',
-    filter_year: 'Год выпуска',
+    filter_year: 'Год ',
     filter_millage: 'Пробег',
     filter_from: 'от',
     filter_to: 'до',
@@ -309,6 +310,7 @@ export const messages = {
     car_owners: 'Владельцев',
     //send form
     send_form_error: 'Пожалуйста, заполните все поля',
+    send_form_thx: 'Спасибо за оставленную заявку',
     send_form_brand: 'Марка',
     send_form_model: 'Модель',
     send_form_millage: 'Пробег',
@@ -347,15 +349,15 @@ export const messages = {
     detailing_types_glass: 'Жидкое стекло',
     detailing_types_ceramics: 'Керамика',
     detailing_types_skin: 'Восстановление кожи',
-    detailing_types_opticians: 'Восстановление оптики',
+    detailing_types_optics: 'Восстановление оптики',
     //why
     detailing_why_head: 'Почему мы?',
     detailing_why_h1: 'Професссиональная химия',
-    detailing_why_t1: 'В своей работе мы используем только профессиональную химию от проверенных произвадителей, которая не портит лакокрасочное покрытие и салон автомобиля',
+    detailing_why_t1: 'В своей работе мы используем только профессиональную химию от проверенных производителей, которая не портит лакокрасочное покрытие и салон автомобиля',
     detailing_why_h2: 'Требования к качеству',
     detailing_why_t2: 'Мы контролируем процесс работы с автомобилем на всех этапах от приемки до выдачи и следим за каждой деталью',
     detailing_why_h3: 'Лучшие мастера',
-    detailing_why_t3: 'У нас работают только квалифицированныеспециалисты, имеющие большой опыт и прошедшие обучения в лучших детейлинг-студиях',
+    detailing_why_t3: 'У нас работают только квалифицированные специалисты, имеющие большой опыт и прошедшие обучения в лучших детейлинг-студиях',
     //price list
     detailing_price_list_head: 'Прайс-лист',
     detailing_price_list_class: 'класс',
