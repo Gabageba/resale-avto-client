@@ -8,6 +8,12 @@ import Footer from "../../components/Footer/Footer";
 import OnSale from './OnSale/OnSale';
 
 const Main = (props) => {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
+
   return (
     <div className={style.main}>
       <Banner />

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import style from './Reference.module.css'
 import logo from '../../assets/logo.svg'
 import {FormattedMessage} from 'react-intl';
 import Footer from '../../components/Footer/Footer';
 
 const Reference = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
+
   return (
     <div>
       {/*<h1 className={'header-info'}>О комании</h1>*/}
