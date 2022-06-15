@@ -31,7 +31,7 @@ const CarsList = () => {
             <div className={style.carsLine}>
               {
                 carsData.map(car=>(
-                  <InLineCarCards key={car.id} carData={car} isDel={isDel}/>
+                  <InLineCarCards key={car.id} carData={car} isDel={isDel} noNav={true}/>
                 ))}
             </div>
       }

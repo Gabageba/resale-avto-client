@@ -5,7 +5,7 @@ import {CAR_PAGE_ROUTE} from '../../utils/const';
 import {useNavigate} from 'react-router-dom';
 import { addInHistory } from "../../http/historyAPI";
 
-const InLineCarCards = ({carData, isDel, onDel}) => {
+const InLineCarCards = ({carData, isDel, onDel, noNav}) => {
 
   let brand = useSelector(state => state.specifications.brands).filter((b) => b.id === carData.brandId)
   let model = useSelector(state => state.specifications.models).filter((m) => m.id === carData.modelId)
@@ -23,14 +23,15 @@ const InLineCarCards = ({carData, isDel, onDel}) => {
     <div className={style.inLineCards}>
       <div className={style.car}>
         <div className={style.info} onClick={() => {
-          if (!isDel) {
+          if (isDel && noNav) {
+          } else {
             if (isAuth){
               addInHistory(carData.id, user.mainInfo.id).then()
               navigate(CAR_PAGE_ROUTE + '/' + carData.id)
             } else {
               navigate(CAR_PAGE_ROUTE + '/' + carData.id)
             }
-          };
+          }
         }}>
           <img src={process.env.REACT_APP_API_URL + '/' + carData.img} alt={carData.name} className={style.image}/>
           <div className={style.infoBlock}>
